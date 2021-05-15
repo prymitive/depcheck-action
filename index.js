@@ -16,8 +16,9 @@ args.push(workdir);
 (async () => {
   core.info(`Running: ${args.join(" ")}`);
   try {
-    const { stdout } = await execa("./node_modules/.bin/depcheck", args);
+    const { stdout, stderr } = await execa("./node_modules/.bin/depcheck", args);
     core.info(stdout);
+    core.info(stderr);
   } catch (err) {
     core.setFailed(err.stdout);
   }
