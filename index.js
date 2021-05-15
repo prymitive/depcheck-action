@@ -6,8 +6,7 @@ let args = ["depcheck"];
 const config = core.getInput("config");
 if (config !== "") {
   core.info(`Using config file: ${config}`);
-  args.push("--config");
-  args.push(config);
+  args.push(`--config=${config}`);
 }
 
 const workdir = core.getInput("workdir") || ".";
