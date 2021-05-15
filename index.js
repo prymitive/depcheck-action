@@ -1,5 +1,5 @@
-import core from "@actions/core";
-import execa from "execa";
+const core = require("@actions/core");
+const execa = require("execa");
 
 const workdir = core.getInput("workdir") || ".";
 core.info(`Using workdir: ${workdir}`);
