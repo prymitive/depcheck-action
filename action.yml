@@ -5,6 +5,10 @@ inputs:
     description: "Working directory to use"
     required: false
     default: "."
+  config:
+    description: "Config file to use"
+    required: false
+    default: ""
 runs:
   using: "node12"
   main: "index.js"
