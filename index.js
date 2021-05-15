@@ -20,6 +20,6 @@ args.push(workdir);
     core.info(stdout);
     core.info(stderr);
   } catch (err) {
-    core.setFailed(err.stdout);
+    core.setFailed(err.stderr || err.stdout);
   }
 })();
