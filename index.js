@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 const execa = require("execa");
 
-let args = ["./node_modules/.bin/depcheck"];
+let args = [];
 
 const config = core.getInput("config");
 if (config !== "") {
@@ -16,7 +16,7 @@ args.push(workdir);
 (async () => {
   core.info(`Running: ${args.join(" ")}`);
   try {
-    const { stdout } = await execa("node", args);
+    const { stdout } = await execa("./node_modules/.bin/depcheck", args);
     core.info(stdout);
   } catch (err) {
     core.setFailed(err.stdout);
