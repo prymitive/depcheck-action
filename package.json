@@ -1,0 +1,26 @@
+{
+  "name": "depcheck-action",
+  "version": "1.0.0",
+  "description": "GitHub depcheck action",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prymitive/depcheck-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/prymitive/depcheck-action/issues"
+  },
+  "homepage": "https://github.com/prymitive/depcheck-action#readme",
+  "dependencies": {
+    "@actions/core": "1.2.7",
+    "depcheck": "1.4.1",
+    "execa": "5.0.0"
+  }
+}

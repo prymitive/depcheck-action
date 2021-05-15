@@ -1,0 +1,10 @@
+name: "depcheck action"
+description: "Analyze project dependencies using depcheck"
+inputs:
+  workdir:
+    description: "Working directory to use"
+    required: false
+    default: "."
+runs:
+  using: "node14"
+  main: "index.js"
