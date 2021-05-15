@@ -1,5 +1,5 @@
 const core = require("@actions/core");
-const execa = require("execa");
+const exec = require("@actions/exec");
 
 let args = [];
 
@@ -16,10 +16,8 @@ args.push(workdir);
 (async () => {
   core.info(`Running: ${args.join(" ")}`);
   try {
-    const { stdout, stderr } = await execa("./node_modules/.bin/depcheck", args);
-    core.info(stdout);
-    core.info(stderr);
+    await exec.exec("./node_modules/.bin/depcheck", args);
   } catch (err) {
-    core.setFailed(err.stderr || err.stdout);
+    core.setFailed("depcheck failed");
   }
 })();
