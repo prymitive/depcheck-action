@@ -1,4 +1,4 @@
-#!/bin/sh -lx
+#!/bin/sh -l
 
 if [ "$2" != "" ]; then
     CONFIG="--config=$2"
