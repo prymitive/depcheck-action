@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 const exec = require("@actions/exec");
 
-let args = [];
+let args = ["depcheck"];
 
 const config = core.getInput("config");
 if (config !== "") {
@@ -16,7 +16,7 @@ args.push(workdir);
 (async () => {
   core.info(`Running: ${args.join(" ")}`);
   try {
-    await exec.exec("./node_modules/.bin/depcheck", args);
+    await exec.exec("npx", args);
   } catch (err) {
     core.setFailed("depcheck failed");
   }
