@@ -18,7 +18,7 @@ to `depcheck`.
 ## Example usage
 
 ```YAML
-uses: prymitive/depcheck-action@v1.4.1
+uses: prymitive/depcheck-action@v1.4.2
 with:
   workdir: 'subdir'
   config: 'subdir/depcheck.yaml'
