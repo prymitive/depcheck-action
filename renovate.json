@@ -4,5 +4,11 @@
   ],
   "node": {
     "supportPolicy": ["lts_latest"]
-  }
+  },
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
