@@ -1,4 +1,4 @@
-FROM node:14.18.1-alpine
+FROM node:17.0.0-alpine
 RUN mkdir -p /depcheck
 COPY package.json package-lock.json /depcheck/
 RUN apk add make python build-base
