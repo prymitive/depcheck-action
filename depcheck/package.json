@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/prymitive/depcheck-action#readme",
   "dependencies": {
-    "@vue/compiler-sfc": "3.2.25",
+    "@vue/compiler-sfc": "3.2.26",
     "depcheck": "1.4.2",
     "node-sass": "7.0.0",
     "typescript": "4.5.3"
